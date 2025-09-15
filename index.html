@@ -1,112 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio — Irene Oumou Seffu</title>
-  <meta name="description" content="Portfolio personnel : projets cloud, dev, et produits cosmétiques IQueen Luxury Glow.">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Portfolio — Irene Oumou Seffu</title>
+<meta content="Portfolio personnel : projets cloud, dev, et produits cosmétiques IQueen Luxury Glow." name="description"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<style>/* Minimal, responsive theme */
+:root{
+  --bg:#0b0c10; --fg:#e5e7eb; --muted:#a1a1aa; --accent:#f59e0b; --card:#111217; --border:#1f2937;
+}
+*{box-sizing:border-box} html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial; background:linear-gradient(180deg,#0b0c10, #111827 50%, #0b0c10); color:var(--fg);}
+.container{max-width:1100px;margin:0 auto;padding:28px}
+.header, .footer, .hero, .about, .projects, .contact{padding:28px 0}
+.brand{font-weight:800;letter-spacing:0.6px}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.nav a{color:var(--fg);text-decoration:none}
+.nav #navlinks a{margin-left:18px}
+.hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center}
+.card{background:var(--card);border:1px solid var(--border);padding:18px;border-radius:12px}
+.hero h1{font-size:34px;margin:0 0 8px}
+.hero p.lead{color:var(--muted);margin:0 0 18px}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.project .title{font-weight:600}
+.skills{display:flex;gap:8px;flex-wrap:wrap}
+.skill{background:#0f1724;padding:6px 10px;border-radius:999px;border:1px solid var(--border);font-size:13px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.footer{border-top:1px solid var(--border);padding-top:18px;color:var(--muted);font-size:14px;text-align:center}
+.burger{display:none}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .hero-img{justify-self:center}
+  .cards{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr 1fr}
+  #burger{display:block}
+  .nav #navlinks{display:none}
+  .nav #navlinks.open{display:block;position:absolute;right:10px;top:56px;background:var(--card);border:1px solid var(--border);padding:10px;border-radius:8px}
+  .nav #navlinks.open a{display:block;padding:6px 8px}
+}
+</style>
 </head>
 <body>
-<header class="nav">
-  <a href="#" class="brand">Irene<span>•</span>Portfolio</a>
-  <nav id="navlinks">
-    <a href="#projets">Projets</a>
-    <a href="#skills">Compétences</a>
-    <a href="#experience">Expérience</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <button id="burger" aria-label="Menu">☰</button>
+<header class="nav container">
+<a class="brand" href="#">Irene<span>•</span>Portfolio</a>
+<button id="burger" aria-label="menu" style="background:none;border:0;color:var(--fg);font-weight:700">☰</button>
+<nav id="navlinks" aria-label="navigation">
+<a href="#about">À propos</a>
+<a href="#projects">Projets</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
-
-<section class="hero" id="top">
-  <div class="hero-inner">
-    <h1>Bonjour, je suis <span class="accent">Irene Oumou Seffu</span></h1>
-    <p>Cloud & e‑commerce — je conçois des solutions AWS (S3, CloudFront, Lambda, Terraform) et je crée des produits de beauté <strong>IQueen Luxury Glow</strong>.</p>
-    <div class="cta">
-      <a class="btn" href="#projets">Voir mes projets</a>
-      <a class="btn ghost" href="assets/Irene_Oumou_Seffu_CV.pdf" download>Télécharger mon CV</a>
+<main class="container">
+<section class="hero">
+  <div>
+    <div class="card">
+      <h1>Irene Oumou Seffu</h1>
+      <p class="lead">Ingénieure Cloud & développeuse — création de sites, automatisation, et marque IQueen Luxury Glow.</p>
+      <p>Je conçois des applications web et des solutions cloud. Voici quelques projets récents et informations me concernant.</p>
+      <div style="margin-top:12px" class="skills">
+        <span class="skill">AWS</span>
+        <span class="skill">Terraform</span>
+        <span class="skill">Docker</span>
+        <span class="skill">React</span>
+        <span class="skill">Node.js</span>
+      </div>
     </div>
-    <ul class="badges">
-      <li>AWS • S3 • CloudFront • Route 53</li>
-      <li>Terraform • GitHub Actions</li>
-      <li>HTML • CSS • JS</li>
-    </ul>
+    <div style="margin-top:18px" class="card">
+      <h3>Contact rapide</h3>
+      <p>Email: <a href="mailto:irene@example.com">irene@example.com</a></p>
+      <p>Téléphone: +221 77 000 0000</p>
+      <p>Localisation: Dakar, Sénégal</p>
+    </div>
   </div>
-  <img class="hero-img" src="assets/img/cover.svg" alt="illustration portfolio">
+  <aside class="hero-img card">
+    <!-- If there was a profile image in the original folder, keep the relative path. -->
+    <img src="assets/profile.jpg" alt="Irene Oumou Seffu" style="max-width:100%;border-radius:8px;display:block;margin-bottom:12px"/>
+    <h4>IQueen Luxury Glow</h4>
+    <p class="muted">Produits cosmétiques — branding & packaging</p>
+  </aside>
 </section>
 
-<section id="projets" class="wrap">
-  <h2>Projets récents</h2>
-  <div class="grid cards">
-    <article class="card">
-      <img src="assets/img/projet1.svg" alt="Miniature projet cloud">
-      <div>
-        <h3>Portfolio sur AWS</h3>
-        <p>Site statique hébergé sur S3 avec CDN CloudFront, domaine Route 53, déploiement automatisé via AWS CLI.</p>
-        <ul class="tags"><li>AWS</li><li>S3</li><li>CloudFront</li></ul>
-      </div>
-    </article>
-    <article class="card">
-      <img src="assets/img/projet2.svg" alt="Miniature projet dev">
-      <div>
-        <h3>Paiements boutique</h3>
-        <p>Intégration des notifications commandes/ruptures via API et webhooks. Tableau de bord en temps réel.</p>
-        <ul class="tags"><li>API</li><li>Webhook</li><li>E‑commerce</li></ul>
-      </div>
-    </article>
-    <article class="card">
-      <img src="assets/img/projet3.svg" alt="Miniature projet data">
-      <div>
-        <h3>IaC avec Terraform</h3>
-        <p>Déploiement reproductible d'infra (S3, CloudFront, ACM, Route 53) avec modules Terraform.</p>
-        <ul class="tags"><li>Terraform</li><li>IaC</li></ul>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section id="skills" class="alt wrap">
-  <h2>Compétences</h2>
-  <div class="grid two">
-    <ul class="list">
-      <li>Architecture cloud AWS (S3, CloudFront, Lambda, Route 53)</li>
-      <li>Infrastructure as Code (Terraform)</li>
-      <li>CI/CD (GitHub Actions, CodePipeline)</li>
-    </ul>
-    <ul class="list">
-      <li>Front-end (HTML, CSS, JavaScript)</li>
-      <li>Marketing produit & contenu (IQueen Luxury Glow)</li>
-      <li>Outils : Linux, Git, Docker</li>
+<section id="about" class="about">
+  <div class="card">
+    <h2>À propos</h2>
+    <p>Ingénieure spécialisée en architecture cloud et développement web. Passionnée par l'automatisation, la sécurité et la création de produits physiques (cosmétiques) sous la marque IQueen Luxury Glow.</p>
+    <ul>
+      <li>Conception d'infrastructures sécurisées (AWS)</li>
+      <li>Développement front-end et back-end</li>
+      <li>Gestion de projets & UX basique</li>
     </ul>
   </div>
 </section>
 
-<section id="experience" class="wrap">
-  <h2>Expérience</h2>
-  <div class="timeline">
-    <div class="row"><span>2024–2025</span><p>Création et lancement de la marque cosmétique <strong>IQueen Luxury Glow</strong> (parfums, huiles, brumes, base de maquillage).</p></div>
-    <div class="row"><span>2023–2024</span><p>Mise en place d’infrastructures cloud pour sites vitrines et e‑commerce.</p></div>
+<section id="projects" class="projects">
+  <h2>Projets</h2>
+  <div class="projects-grid">
+    <div class="project card">
+      <div class="title">Portfolio en ligne</div>
+      <p>Site personnel (HTML/CSS/JS). Déployé sur GitHub Pages.</p>
+    </div>
+    <div class="project card">
+      <div class="title">Mediconnect (Infra AWS)</div>
+      <p>Infrastructure as code avec Terraform — gestion instances EC2, VPC, sécurité.</p>
+    </div>
+    <div class="project card">
+      <div class="title">IQueen E-commerce</div>
+      <p>Landing page et catalogues produits pour la marque de cosmétiques.</p>
+    </div>
   </div>
 </section>
 
-<section id="contact" class="wrap">
+<section id="contact" class="contact">
   <h2>Contact</h2>
-  <p>Disponible pour missions et collaborations.</p>
   <div class="contact-grid">
-    <a class="contact-card" href="mailto:contact@exemple.com">✉️ contact@exemple.com</a>
-    <a class="contact-card" href="https://wa.me/221000000000" target="_blank" rel="noopener">WhatsApp</a>
-    <a class="contact-card" href="#" target="_blank" rel="noopener">Instagram</a>
-    <a class="contact-card" href="#" target="_blank" rel="noopener">TikTok</a>
+    <div class="card">
+      <h3>Formulaire</h3>
+      <form onsubmit="event.preventDefault(); alert('Merci ! Votre message a été envoyé.');">
+        <label>Nom<br/><input required type="text" name="name"/></label><br/>
+        <label>Email<br/><input required type="email" name="email"/></label><br/>
+        <label>Message<br/><textarea required name="message"></textarea></label><br/>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+    <div class="card">
+      <h3>Infos</h3>
+      <p>Disponible pour collaborations, freelance et projets long terme.</p>
+      <p>LinkedIn: <a href="#">/irene-queens</a></p>
+    </div>
   </div>
 </section>
-
+</main>
 <footer class="footer">
-  <p>© <span id="year"></span> Irene Oumou Seffu — IQueen Luxury Glow</p>
+<p>© <span id="year"></span> Irene Oumou Seffu — IQueen Luxury Glow</p>
 </footer>
-
-<script src="assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();
+const burger = document.getElementById('burger');
+const nav = document.getElementById('navlinks');
+burger.addEventListener('click',()=> nav.classList.toggle('open'));</script>
 </body>
 </html>
