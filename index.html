@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio — Irene Oumou Seffu</title>
+  <meta name="description" content="Portfolio personnel : projets cloud, dev, et produits cosmétiques IQueen Luxury Glow.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="nav">
+  <a href="#" class="brand">Irene<span>•</span>Portfolio</a>
+  <nav id="navlinks">
+    <a href="#projets">Projets</a>
+    <a href="#skills">Compétences</a>
+    <a href="#experience">Expérience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button id="burger" aria-label="Menu">☰</button>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <h1>Bonjour, je suis <span class="accent">Irene Oumou Seffu</span></h1>
+    <p>Cloud & e‑commerce — je conçois des solutions AWS (S3, CloudFront, Lambda, Terraform) et je crée des produits de beauté <strong>IQueen Luxury Glow</strong>.</p>
+    <div class="cta">
+      <a class="btn" href="#projets">Voir mes projets</a>
+      <a class="btn ghost" href="assets/Irene_Oumou_Seffu_CV.pdf" download>Télécharger mon CV</a>
+    </div>
+    <ul class="badges">
+      <li>AWS • S3 • CloudFront • Route 53</li>
+      <li>Terraform • GitHub Actions</li>
+      <li>HTML • CSS • JS</li>
+    </ul>
+  </div>
+  <img class="hero-img" src="assets/img/cover.svg" alt="illustration portfolio">
+</section>
+
+<section id="projets" class="wrap">
+  <h2>Projets récents</h2>
+  <div class="grid cards">
+    <article class="card">
+      <img src="assets/img/projet1.svg" alt="Miniature projet cloud">
+      <div>
+        <h3>Portfolio sur AWS</h3>
+        <p>Site statique hébergé sur S3 avec CDN CloudFront, domaine Route 53, déploiement automatisé via AWS CLI.</p>
+        <ul class="tags"><li>AWS</li><li>S3</li><li>CloudFront</li></ul>
+      </div>
+    </article>
+    <article class="card">
+      <img src="assets/img/projet2.svg" alt="Miniature projet dev">
+      <div>
+        <h3>Paiements boutique</h3>
+        <p>Intégration des notifications commandes/ruptures via API et webhooks. Tableau de bord en temps réel.</p>
+        <ul class="tags"><li>API</li><li>Webhook</li><li>E‑commerce</li></ul>
+      </div>
+    </article>
+    <article class="card">
+      <img src="assets/img/projet3.svg" alt="Miniature projet data">
+      <div>
+        <h3>IaC avec Terraform</h3>
+        <p>Déploiement reproductible d'infra (S3, CloudFront, ACM, Route 53) avec modules Terraform.</p>
+        <ul class="tags"><li>Terraform</li><li>IaC</li></ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="skills" class="alt wrap">
+  <h2>Compétences</h2>
+  <div class="grid two">
+    <ul class="list">
+      <li>Architecture cloud AWS (S3, CloudFront, Lambda, Route 53)</li>
+      <li>Infrastructure as Code (Terraform)</li>
+      <li>CI/CD (GitHub Actions, CodePipeline)</li>
+    </ul>
+    <ul class="list">
+      <li>Front-end (HTML, CSS, JavaScript)</li>
+      <li>Marketing produit & contenu (IQueen Luxury Glow)</li>
+      <li>Outils : Linux, Git, Docker</li>
+    </ul>
+  </div>
+</section>
+
+<section id="experience" class="wrap">
+  <h2>Expérience</h2>
+  <div class="timeline">
+    <div class="row"><span>2024–2025</span><p>Création et lancement de la marque cosmétique <strong>IQueen Luxury Glow</strong> (parfums, huiles, brumes, base de maquillage).</p></div>
+    <div class="row"><span>2023–2024</span><p>Mise en place d’infrastructures cloud pour sites vitrines et e‑commerce.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="wrap">
+  <h2>Contact</h2>
+  <p>Disponible pour missions et collaborations.</p>
+  <div class="contact-grid">
+    <a class="contact-card" href="mailto:contact@exemple.com">✉️ contact@exemple.com</a>
+    <a class="contact-card" href="https://wa.me/221000000000" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="contact-card" href="#" target="_blank" rel="noopener">Instagram</a>
+    <a class="contact-card" href="#" target="_blank" rel="noopener">TikTok</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Irene Oumou Seffu — IQueen Luxury Glow</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
